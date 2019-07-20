@@ -23,7 +23,9 @@ content.addEventListener('submit', function(e){
         input.value = '';
     });
 
-    let res = laws[selectedLaw].role(...inputs).toFixed(2); 
+    let res = laws[selectedLaw].role(...inputs);
+    res = (typeof res === 'number')? res.toFixed(2) : res;
+
     let unit = laws[selectedLaw].unit; 
 
     Swal.fire({
@@ -32,7 +34,7 @@ content.addEventListener('submit', function(e){
         padding: '3em',
         backdrop: `
           rgba(0,0,123,0.4)
-          url("images/mario.webp")
+          url("images/spongebop.webp")
           center left
           no-repeat
         `

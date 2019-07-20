@@ -131,4 +131,20 @@ let laws = {
         role:   (d, s) => (1 + d) * s,
         unit:   'Hz'
     },
+    binaryToDicIP: {
+        name: 'Binary To Decimal IP',
+        inputs: ['part1', 'part2', 'part3', 'part4'],
+        role: (part1, part2, part3, part4) => {
+            return `${parseInt(part1, 2)}.${parseInt(part2, 2)}.${parseInt(part3, 2)}.${parseInt(part4, 2)}`
+        },
+        unit: ''
+    },
+    dicToBinaryIP: {
+        name: 'Decimal To Binary IP',
+        inputs: ['part1', 'part2', 'part3', 'part4'],
+        role: (part1, part2, part3, part4) => {
+            return `${parseInt(part1).toString(2)}.${parseInt(part2).toString(2)}.${parseInt(part3).toString(2)}.${parseInt(part4).toString(2)}`
+        },
+        unit: ''
+    }
 };
