@@ -1,3 +1,7 @@
+body{
+    background-color: aliceblue;
+}
+
 #list-tab{
     overflow-y: scroll;
     max-height: 250px;
